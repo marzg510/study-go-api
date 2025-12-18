@@ -1,0 +1,41 @@
+# Git関連
+.git
+.gitignore
+
+# Dev Container関連
+.devcontainer
+
+# Docker関連
+Dockerfile
+.dockerignore
+compose.yaml
+docker-compose.yml
+
+# IDE・エディタ
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# ビルド成果物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+main
+
+# テスト・カバレッジ
+*.test
+*.out
+coverage.*
+
+# 依存関係（go.modから再取得するため不要）
+vendor/
+
+# その他
+.env
+.env.*
+*.log
+tmp/
