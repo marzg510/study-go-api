@@ -15,5 +15,26 @@ go get -u github.com/gin-gonic/gin
 go get -u gorm.io/gorm
 go get -u gorm.io/driver/postgres
 ```
+go run main.go
+CMD ["go", "run", "main.go"]
+
+docker build -t sfa-ecr-gotowork .
+docker build -t gotowork .
 
 
+Dockerfile for exec
+
+```Dockerfile
+# FROM public.ecr.aws/docker/library/golang:1.25.5-trixie
+FROM public.ecr.aws/docker/library/golang:1.25.5-alpine
+
+# COPY certadmin.crt /usr/local/share/ca-certificates/
+# RUN update-ca-certificates
+
+WORKDIR /app
+COPY main.go .
+
+EXPOSE 8080
+
+# CMD ["go", "run", "main.go"]
+```
