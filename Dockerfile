@@ -1,6 +1,9 @@
 # ビルドステージ
 FROM public.ecr.aws/docker/library/golang:1.25.5-alpine AS builder
 
+COPY certadmin.crt /usr/local/share/ca-certificates/
+RUN update-ca-certificates
+
 WORKDIR /app
 
 # 依存関係を先にコピー（キャッシュ効率化）
