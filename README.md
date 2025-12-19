@@ -32,4 +32,3 @@ docker run -d -p 8080:8080 --name go-app go-hello-world-app:latest
 
 ## Push to ECR
 
-aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin xxxxxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com
