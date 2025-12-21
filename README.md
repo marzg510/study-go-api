@@ -32,3 +32,13 @@ docker run -d -p 8080:8080 --name go-app go-hello-world-app:latest
 
 ## Push to ECR
 
+## Develop RESTful API
+
+- [GoとGinでRESTful APIを開発する](https://zenn.dev/urakawa_jinsei/articles/e5ba6eea41f96b)
+
+```bash
+cd web-service-gin
+go get .
+go run .
+```
+
